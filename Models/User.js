@@ -10,6 +10,10 @@ var User = (sequelize, api) => {
             type: api.STRING,
             primaryKey: true
         },
+        name: {
+            type: api.STRING,
+            primaryKey: true
+        },
         password: {
             type: api.STRING,
             allowNull:false

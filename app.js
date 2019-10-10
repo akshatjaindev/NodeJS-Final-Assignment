@@ -2,9 +2,10 @@
  * @author : akshatjain
  * 
  * Created At : 05-October-2019
- * Last Modified At : 08-October-2019
+ * Last Modified At : 10-October-2019
  * 
  * See Documentation : @github
+ * URL
  * Architecture : MVC
  * Description : This is the major Configuration file 
  *               all the configurations related this app
@@ -17,6 +18,7 @@ var bodyParser = require("body-parser")
 var session = require("express-session")
 var cookieParser = require('cookie-parser')
 var DB = require("./Services/sequelize-service")
+const nodemailer = require('nodemailer');
 
 //Enable Redis Support For Session Storage
 const redis = require('redis');
@@ -55,6 +57,15 @@ app.use(
         })
     })
 )
+
+//SMTP Email Configuration... {Kindly Enable Less Secure App Access Of Your Account}
+var smtpMailConfig = {
+    service: 'gmail',
+    auth: {
+        user: '###########@gmail.com', // Email id
+        pass: '###########' // Password
+    }
+}
 
 //Enable Server Side Cookies Editing...
 app.use(cookieParser())
@@ -97,9 +108,10 @@ function enableAPI(BandsDataSet) {
 
 //Enable User FrontEnd UI from DataSets...
 function enableFE(UserDataSet) {
+    const transporter = nodemailer.createTransport(smtpMailConfig)
     //Enable Front-End Executin for the User Interface:
     const userUI = require("./Controllers/user-FE")
-    userUI.setDataSet(UserDataSet, router => {
+    userUI.setDataSet(UserDataSet, transporter, router => {
         app.use('/', router)
     })
 }

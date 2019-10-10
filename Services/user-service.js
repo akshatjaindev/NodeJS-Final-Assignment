@@ -46,8 +46,28 @@ function createUser(User, user, callback) {
     })
 }
 
+function resetPassword(User, username, user, callback) {
+    User.update(user, {
+        where: {
+            username
+        }
+    })
+    .then(user =>{
+        callback({
+            msg: 'Password Updated Successfully'
+        })
+    })
+    .catch(err =>{
+        callback({
+            msg: 'Unable To Update Password',
+            reason: err
+        })
+    })
+}
+
 
 module.exports = {
     getUser,
-    createUser
+    createUser,
+    resetPassword
 }
