@@ -44,6 +44,10 @@ Login Screen :
 ![alt text](https://raw.githubusercontent.com/akshatjain244/NodeJS-Final-Assignment/master/screenshots/Login%20Screen.png)
 Register User :
 ![alt text](https://raw.githubusercontent.com/akshatjain244/NodeJS-Final-Assignment/master/screenshots/Register%20User.png)
+Forgotten Password :
+![alt text](https://raw.githubusercontent.com/akshatjain244/NodeJS-Final-Assignment/master/screenshots/Forgotten-password.png)
+Password Recovery Mail :
+![alt text](https://raw.githubusercontent.com/akshatjain244/NodeJS-Final-Assignment/master/screenshots/recover-mail.png)
 Main Dashboard :
 ![alt text](https://raw.githubusercontent.com/akshatjain244/NodeJS-Final-Assignment/master/screenshots/dashboard.png)
 Create Band:
