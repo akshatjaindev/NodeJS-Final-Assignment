@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">My Band App</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Welcome <%= username %> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/dashboard">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/dashboard">My List</a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false"><img style="border-radius: 50%" src="/img/avatar2.png" alt="Avatar"></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="/my-profile" id="my-profile">My Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="btn btn-danger" style="border-radius: 15px;color: white;margin-left: 25%;"
+                        onmouseover="this.style.cursor='pointer'" href="/logout">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>

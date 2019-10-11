@@ -62,8 +62,8 @@ app.use(
 var smtpMailConfig = {
     service: 'gmail',
     auth: {
-        user: '###########@gmail.com', // Email id
-        pass: '###########' // Password
+        user: 'xxxxxxxxxxxxx@gmail.com', // Email id
+        pass: 'xxxxxxxxxxxxx' // Password
     }
 }
 
