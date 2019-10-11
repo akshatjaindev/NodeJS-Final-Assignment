@@ -13,20 +13,20 @@ All Settings related project can be modified in `app.js` file
 To Install and Run the Project Kindly follow the instructions listed below :
 
 - Run **npm install** in the working directory to restore the dependencies
-- Change the Database, Redis, Port **configurations** in the app.js file
+- Change the Database, Redis, Port **configurations** in the `app.js` file
 - Now run **npm start** to start the server
 
 **\*\* All The Tables will be created automatically so no manual interaction will be required with the database, Only the database instance needs to be created \*\***
 
 URL&#39;s For API&#39;s are:
 
-**Create Band** : /api/createband/
+**Create Band** : `/api/createband/`
 
-**Update Band** : /api/updateband/:bandID
+**Update Band** : `/api/updateband/:bandID`
 
-**Get Bands** : /api/band/ , /api/band/:bandID {For Single Band}
+**Get Bands** : `/api/band/` , `/api/band/:bandID` {For Single Band}
 
-**Delete Band** : /api/deleteband/:bandID
+**Delete Band** : `/api/deleteband/:bandID`
 
 All the above API&#39;s are fully secured by the JWT(Json Web Token&#39;s) i.e. the **Authorization Header**
 
